@@ -1,13 +1,5 @@
 import Data from "./common/data.jsx";
-export default function Content() {
-  var list = [
-    { text: "TODO ITEM 0", date: "25/12/2020" },
-    { text: "TODO ITEM 1", date: "25/12/2020" },
-    { text: "TODO ITEM 2", date: "25/12/2020" },
-    { text: "TODO ITEM 3", date: "25/12/2020" },
-    { text: "TODO ITEM 4", date: "25/12/2020" },
-    { text: "TODO ITEM 5", date: "25/12/2020" },
-  ];
+export default function Content({ list }) {
   return (
     <>
       {list.length ? (

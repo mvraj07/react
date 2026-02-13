@@ -1,0 +1,61 @@
+span {
+  color: red;
+}
+button {
+  width: 200px;
+  height: 80px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+body {
+  width: 100vw;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://imgs.search.brave.com/M_sfWYytJx_jTlAZpXpVWBvhbGVk69qer8LLrZxriB4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC8xLzgv/OC8xMjQxNTEtMTky/MHgxMDgwLWRlc2t0/b3AtZnVsbC1oZC1z/dHJhbmdlci10aGlu/Z3MtYmFja2dyb3Vu/ZC1pbWFnZS5qcGc");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  width: 70vw;
+  height: 70vh;
+  background-color: black;
+
+  .image {
+    width: 50%;
+    background-image: url("https://imgs.search.brave.com/uKljmF9HZ0OcstI6R7POcuyj4xAVtZuFxCXa2AuMdwU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvc3Ry/YW5nZXItdGhpbmdz/LXBpY3R1cmVzLWw5/ZDIxcjE5MzZkczA0/M2ouanBn");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px 40px;
+    gap: 10px;
+
+    .dynamicDetails {
+      display: flex;
+      gap: 60px;
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+      .play-button {
+        button {
+          background-color: red;
+          color: white;
+        }
+      }
+    }
+  }
+}
