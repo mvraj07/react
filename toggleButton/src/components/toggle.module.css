@@ -1,0 +1,45 @@
+.outerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 75px;
+  padding: 8px;
+  border-radius: 50px;
+  background-color: rgb(233, 224, 224);
+  border: 2px solid rgb(104, 104, 104);
+  cursor: pointer;
+}
+
+.text {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* OFF STATE */
+.off {
+  background-color: red;
+  color: white;
+  transform: translateX(0);
+}
+
+/* ON STATE */
+.on {
+  background-color: green;
+  color: white;
+  transform: translateX(70px);
+}
