@@ -1,0 +1,60 @@
+javascript - 
+
+type of nan is number why - because javascript follows ieee 754 (institute of electrical and electronics engineering standards for floating point numbers) according to which nan is used to represent invalid calculations (0/0) and it still belongs to the number type.
+
+ console.log({}+[]); - JavaScript converts objects and arrays to primitives using toString(). {} becomes "[object Object]" and [] becomes "", so concatenation gives "[object Object]"
+
+function abc() {
+    return
+    {
+        a:1
+    }
+}
+console.log(abc());
+First undefined: The function abc implicitly returns undefined because JavaScript inserts a semicolon after the return keyword (return;). The object { a: 1 } on the next line becomes unreachable code. 
+Second undefined: The browser console is a REPL (Read-Eval-Print Loop).  It prints the result of the last expression. Since abc() returns undefined, the console prints that return value. 
+
+let arr = [10,15,30];
+arr[5]=100;
+arr.length;
+When arr[5] = 100 is executed on the array [10, 15, 30], the array becomes sparse with empty slots at indices 3 and 4. The length property automatically updates to be one greater than the highest index set.  Since the highest index is 5, the length becomes 6. 
+
+Falsy Values:
+false
+0 (and -0)
+0n (BigInt zero)
+"" (empty string)
+null
+undefined
+NaN (Not-a-Number)
+Truthy Values:
+Objects: Including empty objects {} and empty arrays []. 
+Non-empty strings: Such as "hello" or "0". 
+Non-zero numbers: Such as 42, -1, or 3.14. 
+Functions: e.g., () => {}. 
+The boolean true.
+
+console.log([] == ![]) // true
+Reason:[] is truthy → ![] becomes false
+So comparison becomes: [] == false
+In loose equality (==), both sides are converted to numbers:
+[] → "" → 0
+false → 0
+So:0 == 0 // true
+
+polyfill- A polyfill is a piece of code, typically JavaScript, that provides modern functionality on older browsers that do not natively support it.
+A polyfill is code that adds support for a feature that a browser doesn’t support.
+👉 Simple idea: “If the feature doesn’t exist, we create it.”
+Example (Polyfill for Array.prototype.map)
+if (!Array.prototype.map) {
+  Array.prototype.map = function(callback) {
+    let result = [];
+    for (let i = 0; i < this.length; i++) {
+      result.push(callback(this[i], i, this));
+    }
+    return result;};}
+👉 So older browsers can still use .map() like modern ones.
+
+Primitive data types in JavaScript are immutable, predefined values stored directly in memory (stack) and passed by value.  There are seven primitive types: String, Number, Boolean, Undefined, Null, BigInt, and Symbol.  They have a fixed size, are faster to access, and are compared by value (e.g., 5 === 5 is true). 
+
+Non-primitive data types (also known as reference types) are mutable, complex structures stored in the heap with a reference pointer to the actual data.  The primary non-primitive type is Object, which includes Arrays, Functions, Date, and RegExp.  They have a variable size, are slower to access, require garbage collection, and are compared by reference (two different objects with identical content are not strictly equal). 
